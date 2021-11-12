@@ -6,11 +6,10 @@ def busqueda_decreciente(A, x):
     while (low <= high):
             if x < A[middle]:                   #verify subarray to the right
                 low = middle + 1
-                middle = (low + high) // 2
             else:
                 lower_index = middle               #verfiy subarray to the left
                 high = middle - 1
-                middle = (low + high) // 2
+            middle = (low + high) // 2
     return lower_index
 
-print(busqueda_decreciente([8,5,5,2,1], 0))
+print(busqueda_decreciente([8,6,5,5,4,3,3,2,1], 8))
